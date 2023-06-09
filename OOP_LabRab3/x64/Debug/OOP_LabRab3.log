@@ -1,5 +1,0 @@
-﻿  Functions.cpp
-C:\Users\user\source\repos\OOP_LabRab3\Functions.cpp(17,11): warning C4244: 'initializing': conversion from 'float' to 'long', possible loss of data
-  Main.cpp
-  Generating Code...
-  OOP_LabRab3.vcxproj -> C:\Users\user\source\repos\OOP_LabRab3\x64\Debug\OOP_LabRab3.exe
