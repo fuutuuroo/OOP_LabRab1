@@ -1,0 +1,11 @@
+﻿  main.cpp
+C:\Users\user\source\repos\OOP_LabRab7\List.cpp(137,10): error C2679: binary '=': no operator found which takes a right-hand operand of type 'void' (or there is no acceptable conversion)
+C:\Users\user\source\repos\OOP_LabRab7\Pair.h(48,1): message : could be 'Pair &Pair::operator =(const Pair &)'
+C:\Users\user\source\repos\OOP_LabRab7\List.cpp(137,10): message : while trying to match the argument list '(T, void)'
+          with
+          [
+              T=Pair
+          ]
+C:\Users\user\source\repos\OOP_LabRab7\List.cpp(134,42): message : while compiling class template member function 'void List<Pair>::operator +(const int)'
+C:\Users\user\source\repos\OOP_LabRab7\main.cpp(63,8): message : see the first reference to 'List<Pair>::operator +' in 'main'
+C:\Users\user\source\repos\OOP_LabRab7\main.cpp(45,13): message : see reference to class template instantiation 'List<Pair>' being compiled
