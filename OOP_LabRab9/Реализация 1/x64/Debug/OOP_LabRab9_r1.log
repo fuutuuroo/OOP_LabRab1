@@ -1,0 +1,5 @@
+﻿  List.cpp
+  main.cpp
+  Generating Code...
+C:\Users\user\source\repos\OOP_LabRab9_r1\List.cpp(116): warning C4715: 'List::operator[]': not all control paths return a value
+  OOP_LabRab9_r1.vcxproj -> C:\Users\user\source\repos\OOP_LabRab9_r1\x64\Debug\OOP_LabRab9_r1.exe
