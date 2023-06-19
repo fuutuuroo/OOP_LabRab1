@@ -1,0 +1,8 @@
+﻿  List.cpp
+  main.cpp
+C:\Users\user\source\repos\OOP_LabRab11_t3\List.h(11,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\user\source\repos\OOP_LabRab11_t3\List.cpp(9,22): message : while compiling class template member function 'List<Pair>::List(int)'
+C:\Users\user\source\repos\OOP_LabRab11_t3\main.cpp(13,13): message : see the first reference to 'List<Pair>::List' in 'main'
+C:\Users\user\source\repos\OOP_LabRab11_t3\main.cpp(13,22): message : see reference to class template instantiation 'List<Pair>' being compiled
+  Generating Code...
+  OOP_LabRab11_t3.vcxproj -> C:\Users\user\source\repos\OOP_LabRab11_t3\x64\Debug\OOP_LabRab11_t3.exe
