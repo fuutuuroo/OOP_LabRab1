@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\user\source\repos\OOP_LabRab13_task1\main.cpp(42,30): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\user\source\repos\OOP_LabRab13_task1\main.cpp(78,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  OOP_LabRab13_task1.vcxproj -> C:\Users\user\source\repos\OOP_LabRab13_task1\x64\Debug\OOP_LabRab13_task1.exe
