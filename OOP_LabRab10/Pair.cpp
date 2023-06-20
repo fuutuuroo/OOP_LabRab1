@@ -1,18 +1,6 @@
 ﻿#include "Pair.h"
-
 using namespace std;
-//перегрузка операции ввода
-istream& operator >> (istream& in, Pair& p) {
-	cout << "Введите левое число: ";
-	in >> p.left;
-	cout << "Введите правое число: ";
-	in >> p.right;
-	return in;
-}
-//перегрузка операции вывода
-ostream& operator << (ostream& out, const Pair& p) {
-	return (out << p.left << ":" << p.right) << endl;
-}
+
 //перегрузка операций сравнения
 void Pair::operator < (const Pair& p) {
 	if ((this->left < p.left) || (this->left == p.left && this->right < p.right)) {
@@ -31,11 +19,23 @@ void Pair::operator > (const Pair& p) {
 		cout << "Первая пара чисел НЕ больше, чем вторая пара" << endl;
 	}
 }
-
+//перегрузка оператора сложения
 Pair Pair::operator + (int add) {
 	return Pair(left + add, right + add);
 }
-
+//перегрузка операции ввода
+istream& operator >> (istream& in, Pair& p) {
+	cout << "Введите левое число: ";
+	in >> p.left;
+	cout << "Введите правое число: ";
+	in >> p.right;
+	return in;
+}
+//перегрузка операции вывода
+ostream& operator << (ostream& out, const Pair& p) {
+	return (out << p.left << ":" << p.right) << endl;
+}
+//операции файлового потока
 fstream& operator >> (fstream& fin, Pair& p) {
 	fin >> p.left;
 	fin >> p.right;

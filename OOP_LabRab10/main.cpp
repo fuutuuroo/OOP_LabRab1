@@ -20,8 +20,7 @@ int main() {
 	Pair p;
 	int k, c;
 	char file_name[30];
-	do
-	{ //Меню
+	do { 
 		cout << "1.Создать файл";
 		cout << "\n2.Вывести содержимое файла";
 		cout << "\n3.Удалить записи из файла больше заданного значения";
@@ -33,22 +32,22 @@ int main() {
 		switch (c)
 		{
 		case 1: cout << "Введите название файла: "; 
-			cin >> file_name; //Задаем имя файла
-			k = make_file(file_name); //Вызов функции для записи в файл
+			cin >> file_name;			
+			k = make_file(file_name);	//вызов функции для записи в файл
 			if (k < 0)
-				cout << "Не удалось создать файл!"; //Вывод сообщения об ошибке
+				cout << "Не удалось создать файл!"; 
 			break;
 		case 2: cout << "Введите название файла: "; 
-			cin >> file_name; //Задаем имя файла
-			k = print_file(file_name); //Вызов функции для печати файла
+			cin >> file_name; 
+			k = print_file(file_name);	//функция для печати файла
 			if (k == 0)
-				cout << "Файл пустой!\n"; //Если файл пустой
+				cout << "Файл пустой!\n"; 
 			if (k < 0)
-				cout << "Не удалось открыть файл!\n"; //Если файл нельзя открыть
+				cout << "Не удалось открыть файл!\n"; 
 			break;
 		case 3: cout << "Введите название файла: "; 
 			cin >> file_name;
-			int valueDelete;
+			int valueDelete;			//удалить все записи большие заданного значения
 			cout << "Введите значение, записи больше него будут удалены: "; 
 			cin >> valueDelete;
 			k = deletePairs(file_name, valueDelete);
@@ -59,12 +58,12 @@ int main() {
 			break;
 		case 4: cout << "Введите название файла: "; 
 			cin >> file_name;
-			int valueIncrease, L;
+			int valueIncrease, L;		
 			cout << "Введите значение, записи с которым будут увеличены: "; 
 			cin >> valueIncrease;
 			cout << "Введите число L: "; 
 			cin >> L;
-			k = increasePairs(file_name, valueIncrease, L);
+			k = increasePairs(file_name, valueIncrease, L);	//увеличить все записи с заданным значением на число L
 			if (k == 0)
 				cout << "Файл пустой!\n";
 			if (k < 0)
@@ -80,7 +79,7 @@ int main() {
 			cin >> K;
 			cout << "Новая пара чисел:" << endl;
 			cin >> newPair;
-			k = add_file(file_name, N, newPair);
+			k = add_file(file_name, N, newPair);	//добавить K записей после записи с номером N
 			if (k > 0) {
 				for (int i = 1; i < K; i++) {
 					cout << "Новая пара чисел:" << endl;

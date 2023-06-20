@@ -1,28 +1,27 @@
 ﻿#include "Pair.h"
 #include <string>
-
-int make_file(const char* f_name)
-{
-	fstream stream(f_name, ios::out | ios::trunc); //Открыть для записи
+//функция для записи в файл
+int make_file(const char* f_name) {
+	fstream stream(f_name, ios::out | ios::trunc); 
 	if (!stream)
-		return -1; //Ошибка открытия файла
+		return -1; 
 	int n;
 	Pair p;
 	cout << "Введите количество экземпляров: "; 
 	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
-		cin >> p; //Ввод атрибутов объекта из стандартного потока
-		stream << p << "\n"; //Запись объекта в файловый поток
+		cin >> p; 
+		stream << p << "\n"; 
 	}
-	stream.close(); //Закрыть поток
-	return n; //Вернуть количество записанных объектов
+	stream.close();
+	return n; 
 }
-int print_file(const char* f_name)
-{
-	fstream stream(f_name, ios::in); //Открыть для чтения
+//функция для печати файла
+int print_file(const char* f_name) {
+	fstream stream(f_name, ios::in); 
 	if (!stream)
-		return -1; //Ошибка открытия файла
+		return -1; 
 	Pair temp;
 	int i = 0;
 	while (stream >> temp)
@@ -33,8 +32,7 @@ int print_file(const char* f_name)
 	stream.close();
 	return i;
 }
-//доделать!
-//Удалить все записи большие заданного значения.
+//удалить все записи большие заданного значения
 int deletePairs(const char* f_name, int value) {
 	fstream fromStream(f_name, ios::in);
 	fstream inStream("temp", ios::out | ios::trunc);
@@ -52,10 +50,8 @@ int deletePairs(const char* f_name, int value) {
 	rename("temp", f_name);
 	return i;
 }
-//доделать!
-//Увеличить все записи с заданным значением на число L.
-int increasePairs(const char* f_name, int currentValue, int addValue)
-{
+//увеличить все записи с заданным значением на число L
+int increasePairs(const char* f_name, int currentValue, int addValue) {
 	fstream fromStream(f_name, ios::in);
 	fstream inStream("temp", ios::out | ios::trunc);
 	int i = 0;
@@ -73,14 +69,12 @@ int increasePairs(const char* f_name, int currentValue, int addValue)
 	rename("temp", f_name);
 	return i;
 }
-//доделать!
-//Добавить K записей после записи с номером N.
-int add_file(const char* f_name, int k, Pair newPair)
-{
-	fstream temp("temp", ios::out); //Открыть для записи
-	fstream stream(f_name, ios::in); //Открыть для чтения
+//добавить K записей после записи с номером N
+int add_file(const char* f_name, int k, Pair newPair) {
+	fstream temp("temp", ios::out); 
+	fstream stream(f_name, ios::in); 
 	if (!stream)
-		return -1; //Ошибка открытия файла
+		return -1; 
 	Pair p;
 	int i = 0, l = 0;
 	while (stream >> p)
@@ -91,7 +85,7 @@ int add_file(const char* f_name, int k, Pair newPair)
 		temp << p;
 		if (i == k)
 		{
-			temp << newPair; //Записать в temp новую запись
+			temp << newPair; 
 			l++;
 		}
 	}
@@ -99,5 +93,5 @@ int add_file(const char* f_name, int k, Pair newPair)
 	temp.close();
 	remove(f_name);
 	rename("temp", f_name);
-	return l; //Количество добавленных
+	return l; 
 }
