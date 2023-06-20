@@ -1,6 +1,4 @@
 #include "Pair.h"
-
-
 //конструкторы
 Pair::Pair() {
 	left = 0;
